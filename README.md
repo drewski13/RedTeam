@@ -1,2 +1,2 @@
 # RedTeam
-practice coding for red team scenarios and possible some tools eventually
+practice coding for red team scenarios and possibly some tools eventually
