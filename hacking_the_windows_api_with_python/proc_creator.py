@@ -119,6 +119,8 @@ def create_process(application_name: str, show_window: int, cmdline: str) -> str
     else:
         print(f"[+] Starting {application_name} with HIDDEN window")
     lpApplicationName = application_name
+
+    # set lpCommandLine to None (NULL) if user sent empty string
     if len(cmdline) > 1:
         lpCommandLine = f"{application_name} {cmdline}"
     else:
@@ -127,11 +129,11 @@ def create_process(application_name: str, show_window: int, cmdline: str) -> str
     lpThreadAttributes = None
     lpEnvironment = None
     lpCurrentDirectory = None
-
     dwCreationFlags = 0x00000010
     bInheritHandles = False
-
     lpProcessInformation = PROCESS_INFORMATION()
+
+    # setting field values for startupinfo() structure
     lpStartupInfo = STARTUPINFOA()
     lpStartupInfo.wShowWindow = show_window
     lpStartupInfo.dwFlags = 0x1
