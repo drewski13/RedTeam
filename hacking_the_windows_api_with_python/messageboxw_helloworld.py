@@ -12,10 +12,10 @@ int MessageBoxW(
 );
 '''
 
-hwnd = None
+hwnd = None #not used because my window does not need to be a child of another process
 lpText = "Hello, World!"
 lpCaption = "Hello World Caption"
-uType = 0x00000001
+uType = 0x00000001 #MB_OKCANCEL, 0x00000001L, The message box contains two push buttons: OK and Cancel.
 
 int_ret = user_handle.MessageBoxW(hwnd, lpText, lpCaption, uType)
 
