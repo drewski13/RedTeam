@@ -1,5 +1,5 @@
 # Simple script to learn about DLL injection
-#
+# *Unfinished...
 # by Drewski1313
 #############################################
 
