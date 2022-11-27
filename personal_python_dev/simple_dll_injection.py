@@ -1,5 +1,5 @@
 # Simple script to learn about DLL injection
-# *Unfinished...
+#   *look into how to get perms for injecting into more diff processes
 # by Drewski1313
 #############################################
 
